@@ -2,10 +2,11 @@
   "name": "which_tng",
   "version": "1.0.0",
   "description": "A random Star Trek: The Next Generation episode suggestor",
-  "main": "index.js",
+  "ain": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "beefy": "beefy client.js --live --index=index.html",
+    "start": "npm start"
   },
   "author": "Dan Finlay",
   "license": "ISC",
@@ -26,7 +27,6 @@
   },
   "homepage": "https://github.com/flyswatter/which-tng",
   "dependencies": {
-    "ecstatic": "^1.0.1",
     "mustache": "^2.1.3"
   },
   "devDependencies": {
