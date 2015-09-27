@@ -33,11 +33,13 @@ html, body {
       url(fonts/TNG_Title.otf) format('opentype'),
       url(fonts/TNG_Title.woff2) format('woff2'),
       url(fonts/TNG_Title.0) format('woff');
-  /*unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;*/
 }
-/**{
-  font-family: sans-serif;
-}*/
+@font-face {
+  font-family: 'Montalbon';
+  font-weight:400;
+  src:local('Montalbon Condensed Italic'),
+      url(fonts/Montalban.otf) format('opentype');
+}
 h1, h2 {
   color: rgb(77, 153, 255);
   font-family: 'Star Trek', 'San Francisco', 'Helvetica', 'serif';
@@ -56,6 +58,7 @@ h2 { font-size: 45pt;}
 section {
   font-size: 26pt;
   animation: throb 3s infinite;
+  font-family: Montalbon, sans-serif;
 }
 a{
   text-decoration: underline;
@@ -63,7 +66,7 @@ a{
   transition: color 0.4s;
 }
 a:hover{
-  color: white;
+  color: #CFCFFF;
 }
 #enterprise{
   position: relative;
