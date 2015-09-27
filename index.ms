@@ -39,11 +39,18 @@ html, body {
   font-family: sans-serif;
 }*/
 h1, h2 {
-  color: rgb(40,102,186);
+  color: rgb(77, 153, 255);
   font-family: 'Star Trek', 'San Francisco', 'Helvetica', 'serif';
   text-shadow: 1px 1px 15px #5847E3;
   line-height: 20px;
+  animation: throb 3s infinite;
 }
+@keyframes throb {
+  0% { text-shadow: 1px 1px 15px #5738FF }
+  50% { text-shadow: 1px 1px 20px #806BF1 }
+  100% { text-shadow: 1px 1px 15px #5738FF; }
+}
+
 h1 { font-size: 65pt;}
 h2 { font-size: 45pt;}
 section {
@@ -99,7 +106,7 @@ a:hover{
     <h1>Star Trek: TNG</h1>
     <h2>Episode Suggestor</h2>
     <section class="suggestion">
-      How about episode <span class="number">{{num}}</span>: "<a class="title" href={{url}}>{{title}}</a>"?
+      How about episode <span class="number">{{num}}</span>, "<a class="title" href={{url}}>{{title}}</a>"?
     </section>
     <img src='/img/enterprise.jpg' id="enterprise">
   </div>
