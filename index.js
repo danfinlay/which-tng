@@ -20,7 +20,7 @@ http.createServer(handleConnection).listen(port, function(){
 
 function handleConnection(req, res) {
   console.dir(req.url)
-  if (req.url.match(/\/|.+html/)){ // Root or any .html file
+  if (req.url == '/'){ // Root or any .html file
     renderTemplate(req, res)
   } else {
     staticHandler(req, res)
@@ -29,8 +29,10 @@ function handleConnection(req, res) {
 
 function renderTemplate (req, res){
   var randomEpisode = Math.ceil(episodes.length * Math.random())
+  var episode = episodes[randomEpisode]
   res.writeHead(200, {
     type: 'text/html'
   })
-  res.end(Mustache.render(template, episodes[randomEpisode]))
+  console.log("Attempting to render episode " + JSON.stringify(episode))
+  res.end(Mustache.render(template, episode))
 }
