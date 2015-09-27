@@ -9,7 +9,7 @@
   <h1>Star Trek: TNG</h1>
   <h2>Episode Suggestor</h2>
   <section class="suggestion">
-    How about episode <span class="number">{{num}}</span>: "<span class="title">{{title}}</span>"?
+    How about episode <span class="number">{{num}}</span>: "<a class="title" href={{url}}>{{title}}</a>"?
   </section>
 </body>
 

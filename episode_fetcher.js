@@ -26,6 +26,7 @@ function (err, res, body){
     episodes.push({
       num: $(row).find('th').text(),
       title: title.substr(1, title.length-2),
+      url: `https://en.wikipedia.org${$(row).find('.summary a').attr('href')}`
     })
   }
   fs.writeFileSync(outputPath, JSON.stringify(episodes, null, 2))
