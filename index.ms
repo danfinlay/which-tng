@@ -55,6 +55,7 @@ h1 { font-size: 65pt;}
 h2 { font-size: 45pt;}
 section {
   font-size: 26pt;
+  animation: throb 3s infinite;
 }
 a{
   text-decoration: underline;
@@ -188,7 +189,6 @@ $(function () {
   };
 
 });
-
 </script>
 
 </html>
