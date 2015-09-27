@@ -1,4 +1,7 @@
 <!doctype html>
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
 
 <html>
 <head>
@@ -916,6 +919,10 @@ html, body {
   /*background-color: black;*/
   color: rgb(40,102,186);
   margin: 0px; padding:0px; overflow: hidden;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 #WebGL-output{
   z-index:0;
@@ -930,7 +937,7 @@ html, body {
 .overlay {
   text-align: center;
   position: relative;
-  padding-top: 50px;
+  padding-top: 20px;
   color: #ABADFF;
   perspective: 500px;
   width: 100%;
@@ -958,9 +965,9 @@ h1, h2 {
   color: rgb(77, 153, 255);
   font-family: 'Star Trek', 'San Francisco', 'Helvetica', 'serif';
   text-shadow: 1px 1px 15px #5847E3;
-  line-height: 20px;
   animation: throb 3s infinite;
   z-index: 3;
+  line-height: 78%
 }
 @keyframes throb {
   0% { text-shadow: 1px 1px 15px #5738FF }
@@ -968,10 +975,10 @@ h1, h2 {
   100% { text-shadow: 1px 1px 15px #5738FF; }
 }
 
-h1 { font-size: 65pt;}
-h2 { font-size: 45pt;}
+h1 { font-size: 55pt;}
+h2 { font-size: 38pt;}
 section {
-  font-size: 26pt;
+  font-size: 20pt;
   animation: throb 3s infinite;
   font-family: Montalbon, sans-serif;
 }
@@ -988,7 +995,7 @@ button {
   background: rgba(0,0,0,0);
 
   color: rgb(77, 153, 255);
-  font-size: 14pt;
+  font-size: 12pt;
   font-family: Montalbon, sans-serif;
 
   border-radius: 5px;
