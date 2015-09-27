@@ -920,14 +920,24 @@ html, body {
 #WebGL-output{
   z-index:0;
   position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#WebGL-output canvas{
+  width: 100%;
+  height: 100%;
 }
 .overlay {
   text-align: center;
   position: relative;
-  z-index:1;
   padding-top: 50px;
   color: #ABADFF;
   perspective: 500px;
+  width: 100%;
+  height: 100%;
+}
+.suggestion {
+  z-index: 3;
 }
 
 @font-face {
@@ -950,6 +960,7 @@ h1, h2 {
   text-shadow: 1px 1px 15px #5847E3;
   line-height: 20px;
   animation: throb 3s infinite;
+  z-index: 3;
 }
 @keyframes throb {
   0% { text-shadow: 1px 1px 15px #5738FF }
@@ -991,21 +1002,18 @@ button:hover {
 button:focus { outline: 0; }
 
 #enterprise{
+  z-index: -1;
   position: relative;
+
+  /*transform: translateX(-14000px) translateZ(-10000px) translateY(-3000px);*/
   animation: swoop 8s infinite;
-/*transform: translateX(140000px) translateZ(100000px) translateY(0) scaleX(-1);*/
 
-
-  /*transform: translateX(-14000px) translateZ(-10000px) translateY(-3000px) scaleX(-100%);*/
-  /*transform: scale(0.02) translateX(-46000px) translateY(-13000px)*/
-  /*transform: scale(0.01) translateX(-8000px) translateY(-3000px)*/
-  /*transform: scale(1) translateX(3200px) translateY(-1600px)*/
 }
 @keyframes swoop {
   0% {
     transform: translateX(-140000px) translateZ(-100000px) translateY(0px);
   }
-  45% {
+  40% {
     transform: translateX(-14000px) translateZ(-10000px) translateY(-3000px);
   }
   50% {
@@ -1014,7 +1022,7 @@ button:focus { outline: 0; }
   51% {
     transform: translateX(129998px) translateZ(-100000px) translateY(0) scaleX(-1)
   }
-  95% {
+  90% {
     transform: translateX(9598px) translateZ(-8000px) translateY(-1000px) scaleX(-1)
   }
   100% {
